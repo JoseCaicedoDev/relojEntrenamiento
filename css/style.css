@@ -1,8 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+:root {
+  --color-main: #45b4d1;
+  --color-auxiliar2: #d87431;
+  --color-black: #212e37;
+  --second-font: "Montserrat", sans-serif;
+}
+
 html {
-  /*   background: #018ded url(https://unsplash.it/1500/1000?image=881&blur=5); */
-  background: #018ded;
-  font-family: "helvetica neue";
+  font-family: var(--second-font);
   font-size: 10px;
+  color: var(--color-black);
 }
 
 body {
@@ -18,7 +25,7 @@ body {
 .clock {
   width: 30rem;
   height: 30rem;
-  border: 20px solid white;
+  border: 20px solid var(--color-main);
   border-radius: 50%;
   margin: 50px auto;
   position: relative;
@@ -37,13 +44,44 @@ body {
 .hand {
   width: 50%;
   height: 6px;
-  background: black;
+  background: var(--color-black);
   position: absolute;
   top: 50%;
+  border-radius: 10px;
   transform-origin: 100%;
   transform: rotate(90deg);
   transition: all 0.05s;
   transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+.hour-hand {
+  width: 120px;
+  top: 50%;
+  right: 50%;
+}
+.min-hand {
+  height: 4px;
+}
+.second-hand {
+  height: 2px;
+  background-color: var(--color-auxiliar2);
+}
+.number {
+  position: absolute;
+  font-weight: 600;
+}
+.num_12 {
+  right: 46%;
+}
+.num_6 {
+  right: 48%;
+  bottom: 0;
+}
+.num_9 {
+  top: 47%;
+}
+.num_3 {
+  top: 47%;
+  right: 0;
 }
 
 .clock_digital {
